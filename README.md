@@ -62,7 +62,7 @@ This screenshot shows the trained models:
 ![image](./img/rundetails_widget.PNG)
 
 ### Results
-The best model from AutoML is the VotingEnsemble model with an accuracy of 78.14 %.
+The best model from AutoML is the VotingEnsemble model with an accuracy of 78.65 %.
 
 ## Hyperparameter Tuning
 For Hyperdrive I choose the logistic regression classifier as model, because the target column output is 1 or 0 -> classification problem. The dataset is loaded into the notebook and the script train.py is used for training.
