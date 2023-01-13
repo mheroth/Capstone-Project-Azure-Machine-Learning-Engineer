@@ -62,7 +62,7 @@ This screenshot shows the trained models:
 ![image](./img/rundetails_widget.PNG)
 
 ### Results
-The best model from AutoML is the VotingEnsemble model with an accuracy of 78,14 %.
+The best model from AutoML is the VotingEnsemble model with an accuracy of 78.14 %.
 
 ## Hyperparameter Tuning
 For Hyperdrive I choose the logistic regression classifier as model, because the target column output is 1 or 0 -> classification problem. The dataset is loaded into the notebook and the script train.py is used for training.
@@ -82,7 +82,7 @@ For Hyperdrive I choose the logistic regression classifier as model, because the
 ![image](./img/rundetails_widget_hyperdrive.PNG)
 
 ### Results
-The best model from Hyperdrive is the Vlogistic regression classifier (hyperparameters: C = 0.1, max_iter = 10) with an accuracy of 80,73 %. We can improve it with more hyperparameters, other models, longer training, more data preprocessing, other sampling methods, other metrics ...
+The best model from Hyperdrive is the Vlogistic regression classifier (hyperparameters: C = 0.01, max_iter = 2) with an accuracy of 76.04 %. We can improve it with more hyperparameters, other models, longer training, more data preprocessing, other sampling methods, other metrics ...
 
 ## Model Deployment
 After training of the two approaches we can see that the accurancy of the autoML model is better than the hyperdrive model. Because of this I choosed the autoML model for deployment. Therefore I decided to register the autoML model as the better model and deployed it as a web service. Also the application insights are enabled for it.
