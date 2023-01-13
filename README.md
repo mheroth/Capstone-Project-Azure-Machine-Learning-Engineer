@@ -85,7 +85,7 @@ For Hyperdrive I choose the logistic regression classifier as model, because the
 The best model from Hyperdrive is the Vlogistic regression classifier (hyperparameters: C = 0.1, max_iter = 10) with an accuracy of 80,73 %. We can improve it with more hyperparameters, other models, longer training, more data preprocessing, other sampling methods, other metrics ...
 
 ## Model Deployment
-After training of the two approaches we can see that the accurancy is nearly the same of both models. Because of the high value of weighted-AUC of the autoML model and the imbalanced data, I choosed the autoML model for deployment. Therefore I decided to register the autoML model as the better model and deployed it as a web service. Also the aapplication insights are enabled for it.
+After training of the two approaches we can see that the accurancy of the autoML model is better than the hyperdrive model. Because of this I choosed the autoML model for deployment. Therefore I decided to register the autoML model as the better model and deployed it as a web service. Also the application insights are enabled for it.
  ![image](./img/deployed_model.PNG)
  ![image](./img/deployed_model2.PNG)
  ![image](./img/deployed_model3.PNG)
@@ -93,10 +93,4 @@ After training of the two approaches we can see that the accurancy is nearly the
 Also, we have created inference configuration and edited deploy configuration settings for the deployment. The inference configuration and settings explain the set up of the web service that will include the deployed model. Environment settings and scoring.py script file should be passed the InferenceConfig. The deployed model was configured in Azure Container Instance(ACI) with cpu_cores and memory_gb parameters initialized as 1.
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-- A working model
-- Demo of the deployed  model
-- Demo of a sample request sent to the endpoint and its response
-
-## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+The screen recordings are included in the zip files screen_recordings.zip in this repository.
