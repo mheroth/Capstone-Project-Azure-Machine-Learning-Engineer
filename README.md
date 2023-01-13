@@ -85,7 +85,7 @@ For Hyperdrive I choose the logistic regression classifier as model, because the
 The best model from Hyperdrive is the Vlogistic regression classifier (hyperparameters: C = 0.1, max_iter = 10) with an accuracy of 80,73 %. We can improve it with more hyperparameters, other models, longer training, more data preprocessing, other sampling methods, other metrics ...
 
 ## Model Deployment
-After training of the two approaches the Hyperdrive model gives a better accurancy and will be chosen for the deployment. The Hyperdrive model exceedes the AutoML model by 2,59 %. It is not that much but a little bit better. Therefore I decided to register the hyperdrive model as the best model and deployed as a web service. Also the aapplication insights are enabled for it.
+After training of the two approaches we can see that the accurancy is nearly the same of both models. Because of the high value of weighted-AUC of the autoML model and the imbalanced data, I choosed the autoML model for deployment. Therefore I decided to register the autoML model as the better model and deployed it as a web service. Also the aapplication insights are enabled for it.
  ![image](./img/deployed_model.PNG)
  ![image](./img/deployed_model2.PNG)
  ![image](./img/deployed_model3.PNG)
