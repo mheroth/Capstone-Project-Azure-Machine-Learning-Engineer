@@ -57,13 +57,12 @@ The screenshot shows the registered dataset:
 This screenshot shows the trained models:
 ![image](./img/trained_models.PNG)
 
-The best model from AutoML is the VotingEnsemble model with an accuracy of 78,14 %:
 ![image](./img/best_model_automl.PNG)
 
-### Results
-*TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
+![image](./img/rundetails_widget.PNG)
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+### Results
+The best model from AutoML is the VotingEnsemble model with an accuracy of 78,14 %.
 
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
