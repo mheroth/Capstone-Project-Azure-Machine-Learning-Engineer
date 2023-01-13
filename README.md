@@ -64,7 +64,8 @@ The screenshot shows the registered dataset:
 ![image](./img/dataset_reg.PNG)
 
 ## Automated ML
-*TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
+This screenshot shows the trained models:
+![image](./img/trained_models.PNG)
 
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
