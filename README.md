@@ -85,9 +85,12 @@ For Hyperdrive I choose the logistic regression classifier as model, because the
 The best model from Hyperdrive is the Vlogistic regression classifier (hyperparameters: C = 0.1, max_iter = 10) with an accuracy of 80,73 %. We can improve it with more hyperparameters, other models, longer training, more data preprocessing, other sampling methods, other metrics ...
 
 ## Model Deployment
+After training of the two approaches the Hyperdrive model gives a better accurancy and will be chosen for the deployment. The Hyperdrive model exceedes the AutoML model by 2,59 %. It is not that much but a little bit better. Therefore I decided to register the hyperdrive model as the best model and deployed as a web service. Also the aapplication insights are enabled for it.
+ ![image](./img/deployed_model.PNG)
+ ![image](./img/deployed_model2.PNG)
+ ![image](./img/deployed_model3.PNG)
 
-
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+Also, we have created inference configuration and edited deploy configuration settings for the deployment. The inference configuration and settings explain the set up of the web service that will include the deployed model. Environment settings and scoring.py script file should be passed the InferenceConfig. The deployed model was configured in Azure Container Instance(ACI) with cpu_cores and memory_gb parameters initialized as 1.
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
