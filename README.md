@@ -1,6 +1,6 @@
 # Capstone Project Azure Machine Learning Engineer
 
-This project gives me the opportunity to use the learned knowledge from the Udacity Nanodegree "Azure Machine Learning Engineer with Microsoft Azure" to solve an interesting problem. In this project, I will create two models: one using Automated ML (denoted as AutoML from now on) and one customized model whose hyperparameters are tuned using HyperDrive. I will then compare the performance of both the models and deploy the best performing model.
+This project gives me the opportunity to use the learned knowledge from the Udacity Nanodegree "Azure Machine Learning Engineer with Microsoft Azure" to solve an interesting problem. In this project, I will create two models: one using Automated ML (denoted as AutoML from now on) and one customized model whose hyperparameters are tuned using HyperDrive. I will then compare the performance of both models and deploy the best performing model.
 
 This project will demonstrate my ability to use an external dataset in my workspace, train a model using the different tools available in the AzureML framework as well as my ability to deploy the model as a web service.
 
