@@ -86,9 +86,19 @@ The best model from Hyperdrive is the Vlogistic regression classifier (hyperpara
 
 ## Model Deployment
 After training of the two approaches we can see that the accurancy of the autoML model is better than the hyperdrive model. Because of this I choosed the autoML model for deployment. Therefore I decided to register the autoML model as the better model and deployed it as a web service. Also the application insights are enabled for it.
+
+Enable insights via notebook
+ ![image](./img/enable_insights.PNG)
+ 
+Deployed model with insights enabled:
  ![image](./img/deployed_model.PNG)
  ![image](./img/deployed_model2.PNG)
- ![image](./img/deployed_model3.PNG)
+ 
+ Consume model:
+ ![image](./img/consume_model.PNG)
+ 
+ Print logs and delete web service
+ ![image](./img/print_logs_and_delete.PNG)
 
 Also, we have created inference configuration and edited deploy configuration settings for the deployment. The inference configuration and settings explain the set up of the web service that will include the deployed model. Environment settings and scoring.py script file should be passed the InferenceConfig. The deployed model was configured in Azure Container Instance(ACI) with cpu_cores and memory_gb parameters initialized as 1.
 
