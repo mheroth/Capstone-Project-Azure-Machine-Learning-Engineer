@@ -67,6 +67,11 @@ The best model from AutoML is the VotingEnsemble model with an accuracy of 78,14
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
 
+![image](./img/hyperdrive_run.PNG)
+![image](./img/hyperdrive_run2.PNG)
+![image](./img/hyperdrive_run3.PNG)
+![image](./img/hyperdrive_best_model.PNG)
+![image](./img/hyperdrive_best_model2.PNG)
 
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
