@@ -103,4 +103,4 @@ Deployed model with insights enabled:
 Also, we have created inference configuration and edited deploy configuration settings for the deployment. The inference configuration and settings explain the set up of the web service that will include the deployed model. Environment settings and scoring.py script file should be passed the InferenceConfig. The deployed model was configured in Azure Container Instance(ACI) with cpu_cores and memory_gb parameters initialized as 1.
 
 ## Screen Recording
-The screen recording is uploaded to youtube: 
+The screen recording is uploaded to youtube: https://youtu.be/9lTCwMDG650
