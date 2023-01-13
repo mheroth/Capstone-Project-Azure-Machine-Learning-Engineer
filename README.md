@@ -60,6 +60,8 @@ In this project our task is to predict wheather a user is diabetic or not based 
 
 ### Access
 The dataset was taken from kaggle from the link provided in dataset section and then uploaded (registered) in the Azure Machine Learning Studio in Datasets tab through 'upload from local file' option. The dataset was registered with the name 'diabetes'.
+The screenshot shows the registered dataset:
+![image](./img/dataset_reg.PNG)
 
 ## Automated ML
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
