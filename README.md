@@ -65,18 +65,24 @@ This screenshot shows the trained models:
 The best model from AutoML is the VotingEnsemble model with an accuracy of 78,14 %.
 
 ## Hyperparameter Tuning
-*TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
+For Hyperdrive I choose the logistic regression classifier as model, because the target column output is 1 or 0 -> classification problem. The dataset is loaded into the notebook and the script train.py is used for training.
+
+- hyperparameter sampling: randomparametersampling with --C (inverse of regularization) and --maxiter (maximum number of iteraions)
+- policy: bandit policy as an eraly stopping policy, bandit polidy ends run if the primary metric is not within the specified slack factor when compared with the highest performing run
+- primary metric: accuracy
+- primary metric goal: maximize
+- max total runs: set to 24
+- max concurrent runs: set to 4
 
 ![image](./img/hyperdrive_run.PNG)
 ![image](./img/hyperdrive_run2.PNG)
 ![image](./img/hyperdrive_run3.PNG)
 ![image](./img/hyperdrive_best_model.PNG)
 ![image](./img/hyperdrive_best_model2.PNG)
+![image](./img/rundetails_widget_hyperdrive.PNG)
 
 ### Results
-*TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
-
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+The best model from Hyperdrive is the Vlogistic regression classifier (hyperparameters: C = 0.1, max_iter = 10) with an accuracy of 80,73 %. We can improve it with more hyperparameters, other models, longer training, more data preprocessing, other sampling methods, other metrics ...
 
 ## Model Deployment
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
