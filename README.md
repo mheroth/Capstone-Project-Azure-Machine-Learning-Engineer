@@ -54,6 +54,8 @@ The screenshot shows the registered dataset:
 ![image](./img/dataset_reg.PNG)
 
 ## Automated ML
+For the AutoML I choosed a classification task (because the target column output is 1 or 0 -> classification problem) and as target column the column "Output". I enabled the early stopping function with enable_early_stopping=True and I alos used auto featurization (implementing a featurization step to preprocess/clean the dataset automatically or not) and all debug logs will be saved in 'automl_errors.log'. If the experiment would need very long, although I activated early stopping, it would be cancelled after 30 min (experiment_timeout_minutes was set to 30 -> the experiment will timeout after that period to avoid over utilizing of resources). I used an maxconcurrent_iterations of 4 (max number of concurrent iterations to be run parallely), a n_cross_validations of 5 (training and validation sets will be divided into five equal sets) and 24 iterations (number of iteration to be performed to prepare the model).
+
 This screenshot shows the trained models:
 ![image](./img/trained_models.PNG)
 
@@ -62,7 +64,13 @@ This screenshot shows the trained models:
 ![image](./img/rundetails_widget.PNG)
 
 ### Results
-The best model from AutoML is the VotingEnsemble model with an accuracy of 78.65 %.
+The best model from AutoML is the VotingEnsemble model with an accuracy of 78.65 %. The voting ensamble combines the predictions from multiple other models. It is a technique that may be used to improve model performance, ideally achieving better performance than any single model used in the ensemble.
+We can improve our model with the following steps:
+- more data
+- acitvate deep learning option and run on GPU
+- try to find better data with more features
+- longer training: increase number of iterations and deactivate early stopping to train longer and increase the timeout_minutes for example up to 120.
+- take also other metrics into account
 
 ## Hyperparameter Tuning
 For Hyperdrive I choose the logistic regression classifier as model, because the target column output is 1 or 0 -> classification problem. The dataset is loaded into the notebook and the script train.py is used for training.
@@ -81,8 +89,10 @@ For Hyperdrive I choose the logistic regression classifier as model, because the
 ![image](./img/hyperdrive_best_model2.PNG)
 ![image](./img/rundetails_widget_hyperdrive.PNG)
 
+We can improve it with more hyperparameters, other models, longer training, more data preprocessing, other sampling methods, other metrics ...
+
 ### Results
-The best model from Hyperdrive is the Vlogistic regression classifier (hyperparameters: C = 0.01, max_iter = 2) with an accuracy of 76.04 %. We can improve it with more hyperparameters, other models, longer training, more data preprocessing, other sampling methods, other metrics ...
+The best model from Hyperdrive is the Vlogistic regression classifier (hyperparameters: C = 0.01, max_iter = 2) with an accuracy of 76.04 %. 
 
 ## Model Deployment
 After training of the two approaches we can see that the accurancy of the autoML model is better than the hyperdrive model. Because of this I choosed the autoML model for deployment. Therefore I decided to register the autoML model as the better model and deployed it as a web service. Also the application insights are enabled for it.
